@@ -1,5 +1,3 @@
-
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -63,6 +61,10 @@ public class Main {
         String[] modifiedArray = removeElement(originalArray,elementToDelete);
         System.out.println("Array after deletion:");
         System.out.println(Arrays.toString(modifiedArray));
+
+        System.out.println("Enter String value to print reverse of string");
+        String original = sc.nextLine();
+        reverse(original);
     }
 
 
@@ -138,5 +140,45 @@ public class Main {
             i++;
         }*/
         return nArra;
+    }//reverse String  array
+    static void reverse(String[] arr){
+
+        for(int i =0;i<arr.length/2;i++){
+            int swap = arr[i];
+            arr[i] = arr[(arr.length-1)-i]
+
+        }
+    }
+    //reverse
+    static void reverse (String original){
+        String reverse = "";
+        for (int i = original.length()-1; i >=0 ; i--) {
+            reverse+=original.charAt(i);
+
+        }
+        System.out.println("Reversed String: "+reverse);
+
+    }
+    static void reverseArray(String[] arr){
+        /*int start =0;
+        while (start< arr.length-1){
+            itn temp = arr[start];
+            arr[start] = arr[start+1];
+            arr[start+1] = temp;
+
+            start++;
+            end--;
+        }*/
+        String[] reversed = arr.length-1-i;
+        System.out.println(reversed);
+    }
+    static void isPalindrome(String original){
+        
+        for (int i = 0; i < original.length()-1-i; i++) {
+            if(original.charAt(i)!= original.charAt(original.charAt-1-i))
+                System.out.println("Not Palindrome");
+                return;
+        }
+        System.out.println("Palindrome");
     }
 }
