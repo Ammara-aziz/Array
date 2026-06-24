@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 
 
@@ -73,13 +71,22 @@ public  class RandomChallenges {
                 {23}
         };
     }
-
-    static void reverseArray(){
-
+    static void deciToBinary(int deci){
+        int[] binaryNum =new int[1000];
+        int i =0;
+        while(deci>0){
+            binaryNum[i] = deci % 2;
+            deci = deci /2;
+            i++;
+        }
+        for (int j= i-1; j>= 0; j--){
+            System.out.print(binaryNum[j]);
+        }
     }
-
-
 }
+
+
+
 
 
 
